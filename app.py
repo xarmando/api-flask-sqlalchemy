@@ -22,11 +22,6 @@ app.secret_key = 'xarmando'
 api = Api(app)
 
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
-
-
 #app.config['JWT_AUTH_URL_RULE'] = '/login'
 # call both methods on security.py
 # call /auth to get the toke once the user were autheticated
