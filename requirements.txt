@@ -1,4 +1,9 @@
 #Flask-JWT
+Flask
 Flask-RESTful
 Flask_SQLAlchemy
 Flask-JWT-Extended
+
+#interation with flask app
+#iwsgi should be installed out local computer
+uwsgi
