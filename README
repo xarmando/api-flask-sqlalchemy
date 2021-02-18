@@ -1,16 +1,20 @@
-
 This repo was a practice to learn how to save data in SQLite in API RESTFul
 
+Run locally you need to create a virtual environment and activate/deactivate
+
+create a virtual environment:
+    virtualenv <name_venv> --python=<python_version>
+
+run virtual environment, wehre "venv" is the name of the virtual environment : 
+    source venv/bin/activate
+
+stop: just type in the shell: 
+    deacivate
 
 create the virtual environment and install flask dependencies from pip
 
-
 dependencies: 
-
-- Flask
-- Flask-RESTFul
-- flask-jwt
-
+    All dependencies are defined in requirements.txt file
 
 NOTE:
  run test.py it will create SQLite DB under the name of data.db and also it will create a couple of records there. 
@@ -21,3 +25,12 @@ Flask-JWT NOTE:
 - we can create an other path, example /login following a new configuration: app.config['JWT_AUTH_URL_RULE'] = '/login' 
 - authenticate function is called with that username and password. Flask-JWT set this up when we created the JWT object.
 -  Flask-JWT will take the id property of the user object and store that in the JWT
+
+Database:
+
+LOcally app interact with SQLite, and create a db file called "data.db"
+This path will be especify on app.py in the env variable :
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+
+Heroku: 
+

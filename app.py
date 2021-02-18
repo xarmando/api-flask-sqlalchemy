@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from flask_restful import Api
 # this make osme function for us, as encrypt the id at the moment to logiin
@@ -12,7 +13,8 @@ from resources.store import Store, StoreList
 
 app = Flask(__name__)
 # this can be mysql, postgres, etcb
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get(
+    'DATABASE_URL', 'sqlite:///data.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # this allows Flask return message execption from the backend
 app.config['PROPAGATE_EXECPTIONS'] = True

@@ -7,3 +7,6 @@ Flask-JWT-Extended
 #interation with flask app
 #iwsgi should be installed out local computer
 uwsgi
+
+# python library to interact with Postgres
+psycopg2
